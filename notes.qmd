@@ -16,7 +16,8 @@ By the end of this course you will:
 - Learning outcome two.
 - Learning outcome three.
 
-## How to read this document {.unnumbered}
+<details class="how-to-read">
+<summary>How to read this document</summary>
 
 Small snippets of code are shown in a grey box like this:
 
@@ -24,7 +25,7 @@ Small snippets of code are shown in a grey box like this:
 cat("Hello!")
 ```
 
-When the code is run, its output is shown below it, marked with a vertical purple line:
+When the code is run, its output is shown below it, marked with a vertical red line:
 
 ```{r}
 cat("Hello!")
@@ -59,6 +60,8 @@ Important points are highlighted in green boxes like this one:
 These are important concepts and technical notes.
 :::
 
+</details>
+
 ## Workspace setup {.unnumbered}
 
 **Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/)** before the course.
@@ -82,7 +85,11 @@ Figures produced by code are embedded in the page:
 
 ```{r}
 #| fig-alt: "Histogram of eruption durations of the Old Faithful geyser"
-hist(faithful$eruptions, main = "Old Faithful eruptions", xlab = "Duration (minutes)")
+hist(
+  faithful$eruptions,
+  main = "Old Faithful eruptions",
+  xlab = "Duration (minutes)"
+)
 ```
 
 ## Deliberate errors

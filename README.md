@@ -14,7 +14,8 @@ A template for JGI training courses, written in [Quarto](https://quarto.org). Th
 
 ```
 ├── _quarto.yml     site settings: title, header bar, page and slide formats
-├── _brand.yml      colours, logo, fonts and custom components (.cards, .flow, ...)
+├── _brand.yml      colours, logo and fonts
+├── custom.scss     custom styles for the site and slides (.cards, .flow, ...)
 ├── index.qmd       home page: about, prerequisites, objectives, boxed side column of links
 ├── notes.qmd       attendee notes (with a table of contents)
 ├── slides.qmd      the presentation
@@ -23,7 +24,7 @@ A template for JGI training courses, written in [Quarto](https://quarto.org). Th
 └── .github/workflows/render.yml
 ```
 
-Each page is a separate file and is rendered separately. To change how things look, edit `_brand.yml` (website) or the `revealjs` section of `_quarto.yml` (slides), not the `.qmd` files.
+Each page is a separate file and is rendered separately. To change how things look, edit `custom.scss` (website and slides styles) or `_brand.yml` (palette), not the `.qmd` files.
 
 ## Writing the materials
 

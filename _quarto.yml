@@ -1,5 +1,5 @@
 # Course settings shared by every page. This is the main file to edit when
-# starting a new course. Colours, logo and fonts are in _brand.yml.
+# starting a new course. Colours, logo and fonts are in _brand.yml; custom styles are in custom.scss.
 
 project:
   type: website
@@ -22,9 +22,15 @@ website:
 # Website pages (index, notes, instructor)
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
     toc: true
     toc-depth: 2
+    # explicit grid so the right-hand contents column keeps its width
+    grid:
+      sidebar-width: 250px
+      body-width: 1000px
+      margin-width: 250px
+      gutter-width: 1.5rem
     toc-title: "Contents"
     # external links open in a new tab (internal links on index.qmd set target="_blank" themselves)
     link-external-newwindow: true
@@ -37,6 +43,8 @@ format:
   revealjs:
     footer: "[Jean Golding Institute](https://www.bristol.ac.uk/golding/) © CC-BY 4.0"
     slide-number: true
+    # keep slide changes out of the browser history, so Back leaves the slides
+    history: false
     code-line-numbers: false
     highlight-style: github
     transition: fade
@@ -44,43 +52,4 @@ format:
     fig-width: 8
     fig-height: 4.5
     fig-align: center
-    # Slide versions of the custom components in _brand.yml
-    include-in-header:
-      text: |
-        <style>
-        .reveal { --jgi-purple: #3d0251; --jgi-lilac: #b895ce; --jgi-pale: #f4eef8; }
-        .reveal .slide-logo { max-height: 2.4rem !important; }
-        .reveal .footer { font-size: 0.45em; }
-        .reveal table { font-size: 0.7em; }
-        .reveal .callout.callout-style-default .callout-body { font-size: 0.8em; }
-        .reveal .cell-output { border-left: 0.25em solid var(--jgi-lilac); padding-left: 0.7em; }
-
-        /* section dividers: white text on the primary colour */
-        .reveal .slides section.section-divider h1,
-        .reveal .slides section.section-divider h2 { color: #fff !important; }
-        .reveal .section-number { display: block; font-size: 0.5em; letter-spacing: 0.2em; color: var(--jgi-lilac); margin-bottom: 0.3em; }
-        .reveal .section-question { color: #e9dcf2; font-style: italic; margin-top: 0.8em; }
-
-        .reveal .big { font-size: 1.7em; font-weight: 700; line-height: 1.2; color: var(--jgi-purple); }
-        .reveal .medium { font-size: 1.2em; }
-        .reveal .muted { color: #777; font-size: 0.75em; }
-        .reveal .center { text-align: center; }
-        .reveal .your-turn { font-size: 0.85em; background: var(--jgi-pale); border-radius: 0.3em; padding: 0.5em 0.8em; }
-
-        .reveal .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5em; margin-top: 0.5em; }
-        .reveal .card { background: var(--jgi-pale); border-top: 0.25em solid var(--jgi-purple); border-radius: 0.3em; padding: 0.4em 0.6em; font-size: 0.7em; text-align: left; }
-        .reveal .card strong:first-child { display: block; color: var(--jgi-purple); font-size: 1.15em; margin-bottom: 0.2em; }
-
-        .reveal .flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3em; margin: 0.6em 0; }
-        .reveal .flow .step { background: var(--jgi-purple); color: #fff; border-radius: 0.3em; padding: 0.3em 0.6em; font-size: 0.75em; font-family: monospace; }
-        .reveal .flow .step.light { background: var(--jgi-pale); color: var(--jgi-purple); border: 2px solid var(--jgi-purple); }
-        .reveal .flow .arrow { color: var(--jgi-lilac); font-size: 1.2em; font-weight: 700; }
-
-        .reveal .good, .reveal .bad { border-radius: 0.3em; padding: 0.3em 0.6em; margin: 0.3em 0; font-size: 0.8em; }
-        .reveal .good { background: #e6f4ea; border-left: 0.3em solid #1e8e3e; }
-        .reveal .bad { background: #fce8e6; border-left: 0.3em solid #c5221f; }
-
-        .reveal table.mini { font-size: 0.55em; border-collapse: collapse; margin: 0.3em auto; }
-        .reveal table.mini td, .reveal table.mini th { border: 1px solid var(--jgi-lilac); padding: 0.15em 0.5em; }
-        .reveal table.mini th { background: var(--jgi-purple); color: #fff; }
-        </style>
+    theme: [default, custom.scss]

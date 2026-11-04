@@ -41,7 +41,7 @@ We code.<br>You code.
 [First section]{.step} [→]{.arrow} [Second section]{.step}
 :::
 
-# [01]{.section-number} First section {.section-divider background-color="var(--jgi-purple)"}
+# [01]{.section-number} First section {.section-divider background-color="var(--jgi-red)"}
 
 [What question does this section answer?]{.section-question}
 
@@ -84,7 +84,7 @@ Answers are in the notes. Try it yourself first!
 :::
 :::
 
-# [02]{.section-number} Second section {.section-divider background-color="var(--jgi-purple)"}
+# [02]{.section-number} Second section {.section-divider background-color="var(--jgi-red)"}
 
 [What question does this section answer?]{.section-question}
 
