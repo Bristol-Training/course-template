@@ -1,0 +1,3 @@
+# Python packages this course needs, one per line (see README.md).
+# Keep jupyter: Quarto needs it to run {python} code chunks.
+jupyter

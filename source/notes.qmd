@@ -1,0 +1,209 @@
+---
+# Title, subtitle and author are set in _quarto.yml
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: true
+    toc-depth: 2
+    toc-title: "Contents"
+    number-sections: true
+    highlight-style: github
+    embed-resources: true
+    fig-width: 7
+    fig-height: 4.5
+execute:
+  error: true
+  warning: true
+---
+
+![](assets/UoB_RGB_24.png){width=220px fig-alt="University of Bristol logo"}
+
+<!-- Course website hub: only appears on the GitHub Pages site (index.html) -->
+::: {.content-visible when-meta="site"}
+## About this page {.unnumbered .unlisted}
+
+Everything you need for the course is on this page. The slides we use during the session are just below, followed by links to further material, and then the full course notes with every exercise and answer. Bookmark this page so you can come back to it after the course.
+
+::: {.slides-embed}
+```{=html}
+<iframe id="slides-frame" src="slides.html" data-external="1" title="Course slides" allowfullscreen></iframe>
+```
+:::
+
+::: {.hub-buttons}
+```{=html}
+<button type="button" class="btn hub-btn" onclick="document.getElementById('slides-frame').requestFullscreen()">⛶ Full screen</button>
+<a class="btn hub-btn" href="slides.html" target="_blank" rel="noopener">Open slides in a new tab</a>
+```
+:::
+
+Click on the slides, then use the arrow keys to move through them.
+
+### Course materials {.unnumbered .unlisted}
+
+<!-- TODO: replace these cards with links relevant to your course (or delete them) -->
+::: {.cards .hub-cards}
+::: {.content-visible when-meta="publish-instructor-guide"}
+::: {.card}
+**[Instructor guide](instructor-guide.html)**<br>
+Timings, live-coding cues and common pitfalls for the delivery team.
+:::
+:::
+
+::: {.card}
+**[Related course](https://bristol-training.github.io/)**<br>
+A longer-form course that goes deeper.
+:::
+
+::: {.card}
+**[Setup instructions](https://bristol-training.github.io/data-science-project-setup/)**<br>
+How to install the software for this course.
+:::
+:::
+:::
+
+# Introduction {.unnumbered}
+
+Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for.
+
+By the end of this course you will:
+
+- Learning outcome one.
+- Learning outcome two.
+- Learning outcome three.
+
+## How to read this document {.unnumbered}
+
+Small snippets of code are shown in a grey box like this:
+
+```{.r}
+cat("Hello!")
+```
+
+When the code is run, its output is shown below it, marked with a vertical purple line:
+
+```{r}
+cat("Hello!")
+```
+
+Larger pieces of code are shown as scripts with a filename:
+
+```{.r filename="script.R"}
+name <- "Jean Golding"
+cat("Hello,", name, "!")
+```
+
+Commands to run in a terminal look like this:
+
+```{.bash filename="Terminal/Command Prompt"}
+Rscript script.R
+```
+
+At the end of each section there is an exercise. Exercises are shown in blue boxes, followed by a yellow box that contains the answer. Try each exercise yourself before looking at the answer.
+
+::: {#exampleN .callout-note icon=false title='Exercise'}
+This is an exercise. Click the box below to see the answer.
+:::
+
+::: {#answerN .callout-caution icon=false title='Answer (click to open)' collapse="true"}
+This is the answer.
+:::
+
+Important points are highlighted in green boxes like this one:
+
+::: {#keypointsN .callout-tip icon=false title='Key points'}
+These are important concepts and technical notes.
+:::
+
+::: {.instructor}
+**Delivery model:** live-code while attendees follow along in their own scripts. Use the slides to introduce each section, then switch to the editor.
+
+**Suggested timings:**
+
+| Section | Topic | Approx. time |
+|---|---|---|
+| 1 | First section | 30 min |
+| 2 | Second section | 30 min |
+
+Leave about 10 minutes per section for the exercise.
+:::
+
+## Workspace setup {.unnumbered}
+
+**Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/)** before the course.
+
+::: {.instructor}
+Ask attendees to install the software *before* the session, as it can take a while on a slow connection.
+:::
+
+# First section
+
+Each section opens with the question it answers.
+
+## A first example
+
+Code chunks are run when the notes are rendered, and their output appears underneath:
+
+```{r}
+heights <- c(1.62, 1.75, 1.80, 1.68)
+mean(heights)
+```
+
+::: {.instructor}
+**Live code:** type the vector in the console first, then move it into a script.
+
+**Pitfalls:** people often forget the `c()`.
+:::
+
+## Plots
+
+Figures produced by code are embedded in the page:
+
+```{r}
+#| fig-alt: "Histogram of eruption durations of the Old Faithful geyser"
+hist(faithful$eruptions, main = "Old Faithful eruptions", xlab = "Duration (minutes)")
+```
+
+## Deliberate errors
+
+Errors are shown in the notes rather than stopping the render. Mark chunks that fail on purpose with `#| purl: false`, so a script extracted with `knitr::purl()` still runs from top to bottom:
+
+```{r}
+#| purl: false
+mean(heights_typo)
+```
+
+## Exercise {.unnumbered}
+
+::: {#exercise1 .callout-note icon=false title='Exercise'}
+Calculate the median of `heights`.
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+```{r}
+median(heights)
+```
+:::
+
+::: {#keypoints1 .callout-tip icon=false title='Key points'}
+- Keep key points short.
+- One box per section.
+:::
+
+# Second section
+
+More content goes here.
+
+::: {.instructor}
+This section often runs over. If short on time, skip straight to the exercise.
+:::
+
+## Exercise {.unnumbered}
+
+::: {#exercise2 .callout-note icon=false title='Exercise'}
+An exercise for the second section.
+:::
+
+::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
+The answer.
+:::

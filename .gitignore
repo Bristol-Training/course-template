@@ -1,0 +1,19 @@
+# Rendered output (built by `just build` locally and by GitHub Actions)
+build/
+
+# Python virtual environment (created by `just setup`)
+.venv/
+
+# macOS
+.DS_Store
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+
+# Quarto build leftovers
+.quarto/
+source/*_files/
+source/*.html
+**/*.quarto_ipynb

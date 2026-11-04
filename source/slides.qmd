@@ -1,0 +1,124 @@
+---
+# Title and author are set in _quarto.yml
+subtitle: "Course slides"
+format:
+  revealjs:
+    theme: [default, slides.scss]
+    logo: assets/UoB_RGB_24.png
+    footer: "[Jean Golding Institute](https://www.bristol.ac.uk/golding/) © CC-BY 4.0"
+    slide-number: true
+    code-line-numbers: false
+    highlight-style: github
+    embed-resources: true
+    transition: fade
+    transition-speed: fast
+    fig-width: 8
+    fig-height: 4.5
+    fig-align: center
+execute:
+  echo: true
+  eval: false
+  warning: false
+  message: false
+---
+
+## Today's mission {.center}
+
+::: {.big .center}
+One big statement<br>about what we'll<br>achieve today.
+:::
+
+::: notes
+Speaker notes go in a `notes` block. Press S during the presentation to see them.
+:::
+
+## How today works
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.big}
+We code.<br>You code.
+:::
+:::
+::: {.column width="50%"}
+- Type along in **your own script**: don't just watch
+- Errors are normal. Read them out loud!
+- Stuck? Raise your hand
+- The **notes** have everything in detail, plus an exercise for each section
+:::
+::::
+
+## The journey
+
+::: {.flow}
+[First section]{.step} [→]{.arrow} [Second section]{.step}
+:::
+
+# [01]{.section-number} First section {background-color="#3d0251"}
+
+[What question does this section answer?]{.section-question}
+
+## A first example
+
+```{r}
+#| eval: true
+heights <- c(1.62, 1.75, 1.80, 1.68)
+mean(heights)
+```
+
+::: notes
+Live code this in the console, then move it into a script.
+:::
+
+## Key ideas
+
+::: {.cards}
+::: {.card}
+**Idea one**
+A short explanation
+:::
+::: {.card}
+**Idea two**
+A short explanation
+:::
+:::
+
+## Your turn ✍️ {background-color="#f4eef8"}
+
+::: {.your-turn}
+**Exercise 1** in the notes
+
+::: {.medium}
+Calculate the median of `heights`.
+:::
+
+::: {.muted}
+Answers are in the notes. Try it yourself first!
+:::
+:::
+
+# [02]{.section-number} Second section {background-color="#3d0251"}
+
+[What question does this section answer?]{.section-question}
+
+## Do / don't
+
+::: {.good}
+✔ Something to do
+:::
+
+::: {.bad}
+✘ Something to avoid
+:::
+
+## Your turn ✍️ {background-color="#f4eef8"}
+
+::: {.your-turn}
+**Exercise 2** in the notes
+:::
+
+## Thank you {.center}
+
+::: {.big .center}
+Questions?
+:::
