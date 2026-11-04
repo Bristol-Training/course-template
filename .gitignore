@@ -1,8 +1,5 @@
-# Rendered output (built by `just build` locally and by GitHub Actions)
-build/
-
-# Python virtual environment (created by `just setup`)
-.venv/
+# Rendered output
+_site/
 
 # macOS
 .DS_Store
@@ -13,7 +10,8 @@ build/
 .Rproj.user/
 
 # Quarto build leftovers
-.quarto/
-source/*_files/
-source/*.html
+/.quarto/
+*_files/
 **/*.quarto_ipynb
+
+/.luarc.json

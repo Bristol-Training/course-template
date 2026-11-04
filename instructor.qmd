@@ -1,0 +1,33 @@
+---
+title: "Instructor notes"
+format: html
+---
+
+# Introduction {.unnumbered}
+
+**Delivery model:** live-code while attendees follow along in their own scripts. Use the slides to introduce each section, then switch to the editor.
+
+**Suggested timings:**
+
+| Section | Topic | Approx. time |
+|---|---|---|
+| 1 | First section | 30 min |
+| 2 | Second section | 30 min |
+
+Leave about 10 minutes per section for the exercise.
+
+## Workspace setup {.unnumbered}
+
+Ask attendees to install the software *before* the session, as it can take a while on a slow connection.
+
+# First section
+
+## A first example
+
+**Live code:** type the vector in the console first, then move it into a script.
+
+**Pitfalls:** people often forget the `c()`.
+
+# Second section
+
+This section often runs over. If short on time, skip straight to the exercise.

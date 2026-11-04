@@ -1,20 +1,7 @@
 ---
-# Title and author are set in _quarto.yml
+title: "Course Title"
 subtitle: "Course slides"
-format:
-  revealjs:
-    theme: [default, slides.scss]
-    logo: assets/UoB_RGB_24.png
-    footer: "[Jean Golding Institute](https://www.bristol.ac.uk/golding/) © CC-BY 4.0"
-    slide-number: true
-    code-line-numbers: false
-    highlight-style: github
-    embed-resources: true
-    transition: fade
-    transition-speed: fast
-    fig-width: 8
-    fig-height: 4.5
-    fig-align: center
+format: revealjs
 execute:
   echo: true
   eval: false
@@ -54,7 +41,7 @@ We code.<br>You code.
 [First section]{.step} [→]{.arrow} [Second section]{.step}
 :::
 
-# [01]{.section-number} First section {background-color="#3d0251"}
+# [01]{.section-number} First section {.section-divider background-color="var(--jgi-purple)"}
 
 [What question does this section answer?]{.section-question}
 
@@ -83,7 +70,7 @@ A short explanation
 :::
 :::
 
-## Your turn ✍️ {background-color="#f4eef8"}
+## Your turn ✍️
 
 ::: {.your-turn}
 **Exercise 1** in the notes
@@ -97,7 +84,7 @@ Answers are in the notes. Try it yourself first!
 :::
 :::
 
-# [02]{.section-number} Second section {background-color="#3d0251"}
+# [02]{.section-number} Second section {.section-divider background-color="var(--jgi-purple)"}
 
 [What question does this section answer?]{.section-question}
 
@@ -111,7 +98,7 @@ Answers are in the notes. Try it yourself first!
 ✘ Something to avoid
 :::
 
-## Your turn ✍️ {background-color="#f4eef8"}
+## Your turn ✍️
 
 ::: {.your-turn}
 **Exercise 2** in the notes

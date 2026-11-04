@@ -1,66 +1,10 @@
 ---
-# Title, subtitle and author are set in _quarto.yml
-format:
-  html:
-    theme: [cosmo, styles.scss]
-    toc: true
-    toc-depth: 2
-    toc-title: "Contents"
-    number-sections: true
-    highlight-style: github
-    embed-resources: true
-    fig-width: 7
-    fig-height: 4.5
+title: "Course notes"
+format: html
 execute:
   error: true
   warning: true
 ---
-
-![](assets/UoB_RGB_24.png){width=220px fig-alt="University of Bristol logo"}
-
-<!-- Course website hub: only appears on the GitHub Pages site (index.html) -->
-::: {.content-visible when-meta="site"}
-## About this page {.unnumbered .unlisted}
-
-Everything you need for the course is on this page. The slides we use during the session are just below, followed by links to further material, and then the full course notes with every exercise and answer. Bookmark this page so you can come back to it after the course.
-
-::: {.slides-embed}
-```{=html}
-<iframe id="slides-frame" src="slides.html" data-external="1" title="Course slides" allowfullscreen></iframe>
-```
-:::
-
-::: {.hub-buttons}
-```{=html}
-<button type="button" class="btn hub-btn" onclick="document.getElementById('slides-frame').requestFullscreen()">⛶ Full screen</button>
-<a class="btn hub-btn" href="slides.html" target="_blank" rel="noopener">Open slides in a new tab</a>
-```
-:::
-
-Click on the slides, then use the arrow keys to move through them.
-
-### Course materials {.unnumbered .unlisted}
-
-<!-- TODO: replace these cards with links relevant to your course (or delete them) -->
-::: {.cards .hub-cards}
-::: {.content-visible when-meta="publish-instructor-guide"}
-::: {.card}
-**[Instructor guide](instructor-guide.html)**<br>
-Timings, live-coding cues and common pitfalls for the delivery team.
-:::
-:::
-
-::: {.card}
-**[Related course](https://bristol-training.github.io/)**<br>
-A longer-form course that goes deeper.
-:::
-
-::: {.card}
-**[Setup instructions](https://bristol-training.github.io/data-science-project-setup/)**<br>
-How to install the software for this course.
-:::
-:::
-:::
 
 # Introduction {.unnumbered}
 
@@ -115,26 +59,9 @@ Important points are highlighted in green boxes like this one:
 These are important concepts and technical notes.
 :::
 
-::: {.instructor}
-**Delivery model:** live-code while attendees follow along in their own scripts. Use the slides to introduce each section, then switch to the editor.
-
-**Suggested timings:**
-
-| Section | Topic | Approx. time |
-|---|---|---|
-| 1 | First section | 30 min |
-| 2 | Second section | 30 min |
-
-Leave about 10 minutes per section for the exercise.
-:::
-
 ## Workspace setup {.unnumbered}
 
 **Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/)** before the course.
-
-::: {.instructor}
-Ask attendees to install the software *before* the session, as it can take a while on a slow connection.
-:::
 
 # First section
 
@@ -148,12 +75,6 @@ Code chunks are run when the notes are rendered, and their output appears undern
 heights <- c(1.62, 1.75, 1.80, 1.68)
 mean(heights)
 ```
-
-::: {.instructor}
-**Live code:** type the vector in the console first, then move it into a script.
-
-**Pitfalls:** people often forget the `c()`.
-:::
 
 ## Plots
 
@@ -193,10 +114,6 @@ median(heights)
 # Second section
 
 More content goes here.
-
-::: {.instructor}
-This section often runs over. If short on time, skip straight to the exercise.
-:::
 
 ## Exercise {.unnumbered}
 
