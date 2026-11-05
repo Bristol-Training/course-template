@@ -1,6 +1,3 @@
-# Rendered output
-_site/
-
 # macOS
 .DS_Store
 
@@ -11,7 +8,7 @@ _site/
 
 # Quarto build leftovers
 /.quarto/
-*_files/
+/*_files/
 **/*.quarto_ipynb
 
 /.luarc.json

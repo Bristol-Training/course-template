@@ -3,7 +3,11 @@
 
 project:
   type: website
-  output-dir: _site
+  # Rendered site goes in docs/, which GitHub Pages publishes (see README)
+  output-dir: docs
+  # .nojekyll stops GitHub Pages running the site through Jekyll
+  resources:
+    - .nojekyll
   render:
     - index.qmd
     - notes.qmd
