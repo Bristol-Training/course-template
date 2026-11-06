@@ -20,7 +20,7 @@ Welcome to this course! Replace this paragraph with a short description of what 
 
 Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/) before the course.
 
-## Learning objectives
+## Learning outcomes
 
 By the end of this course you will:
 
