@@ -1,0 +1,9 @@
+Package: course
+Title: Course Template
+Version: 0.0.1
+Description: R packages needed to render this course. The GitHub Action installs
+    everything listed under Imports. Add the packages your pages use.
+License: CC-BY-4.0
+Imports:
+    knitr,
+    rmarkdown

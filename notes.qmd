@@ -1,6 +1,9 @@
 ---
 title: "Course notes"
-format: html
+format:
+  html:
+    body-classes: notes-page
+    back-to-top-navigation: true
 execute:
   error: true
   warning: true
@@ -10,11 +13,11 @@ execute:
 
 Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for.
 
-By the end of this course you will:
+By the end of this course you will be able to:
 
-- Learning outcome one.
-- Learning outcome two.
-- Learning outcome three.
+1. Learning outcome one.
+2. Learning outcome two.
+3. Learning outcome three.
 
 <details class="how-to-read">
 <summary>How to read this document</summary>
@@ -44,15 +47,19 @@ Commands to run in a terminal look like this:
 Rscript script.R
 ```
 
-At the end of each section there is an exercise. Exercises are shown in blue boxes, followed by a yellow box that contains the answer. Try each exercise yourself before looking at the answer.
+In each section there is a "Try it yourself" activity, which is also on the slides. Activities are shown in a box with a red top edge, and each one ends with a yellow box that contains the answer. Try each one yourself before looking at the answer.
 
-::: {#exampleN .callout-note icon=false title='Exercise'}
+::::: {.try-it}
+
+[An example activity]{.try-it-title}
+
 This is an exercise. Click the box below to see the answer.
-:::
 
 ::: {#answerN .callout-caution icon=false title='Answer (click to open)' collapse="true"}
 This is the answer.
 :::
+
+:::::
 
 Important points are highlighted in green boxes like this one:
 
@@ -70,6 +77,8 @@ These are important concepts and technical notes.
 
 Each section opens with the question it answers.
 
+[About 30 min · Activity: Exercise 1]{.section-meta}
+
 ## A first example
 
 Code chunks are run when the notes are rendered, and their output appears underneath:
@@ -77,6 +86,13 @@ Code chunks are run when the notes are rendered, and their output appears undern
 ```{r}
 heights <- c(1.62, 1.75, 1.80, 1.68)
 mean(heights)
+```
+
+The same in Python. This block is only shown, not run, because a page runs one language (the slides run Python):
+
+```{.python}
+heights = [1.62, 1.75, 1.80, 1.68]
+sum(heights) / len(heights)
 ```
 
 ## Plots
@@ -101,17 +117,21 @@ Errors are shown in the notes rather than stopping the render. Mark chunks that 
 mean(heights_typo)
 ```
 
-## Exercise {.unnumbered}
+::::: {.try-it}
 
-::: {#exercise1 .callout-note icon=false title='Exercise'}
+## Try it yourself {.unnumbered}
+
+### Exercise 1 {#exercise1 .unnumbered}
+
 Calculate the median of `heights`.
-:::
 
-::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+::: {#answer1 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
 ```{r}
 median(heights)
 ```
 :::
+
+:::::
 
 ::: {#keypoints1 .callout-tip icon=false title='Key points'}
 - Keep key points short.
@@ -122,12 +142,16 @@ median(heights)
 
 More content goes here.
 
-## Exercise {.unnumbered}
+::::: {.try-it}
 
-::: {#exercise2 .callout-note icon=false title='Exercise'}
+## Try it yourself {.unnumbered}
+
+### Exercise 2 {#exercise2 .unnumbered}
+
 An exercise for the second section.
-:::
 
-::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
+::: {#answer2 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
 The answer.
 :::
+
+:::::

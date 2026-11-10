@@ -1,0 +1,4 @@
+# Python packages the pages need. The GitHub Action installs everything listed
+# here. Pin a version if you need one, for example pandas==2.2.2
+# If your course has no Python code, delete this file and Python isn't installed.
+jupyter

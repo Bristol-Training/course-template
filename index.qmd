@@ -1,13 +1,35 @@
 ---
 title: "Course Title"
-format: html
+format:
+  html:
+    grid:
+      sidebar-width: 100px
+      body-width: 1200px
+      margin-width: 100px
+      gutter-width: 1.5rem
 toc: false
 number-sections: false
 ---
 
-::::: {.columns}
+::::: {.home-layout}
 
-:::: {.column width="64%"}
+:::: {.course-sidebar}
+### Course materials
+
+::: {.sidebar-buttons}
+[Slides](slides.qmd){.btn .btn-primary .btn-lg target="_blank"}
+
+[Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
+:::
+
+### More
+
+- [Instructor notes](instructor.qmd){target="_blank"}
+- [Related courses](https://bristol-training.github.io/)
+<!-- TODO: replace these links with resources relevant to your course -->
+::::
+
+:::: {.home-main}
 
 ## About this course
 
@@ -22,31 +44,26 @@ Please follow our [installation instructions](https://bristol-training.github.io
 
 ## Learning outcomes
 
-By the end of this course you will:
+By the end of this course, you will be able to:
 
-- Learning outcome one.
-- Learning outcome two.
-- Learning outcome three.
+1. Learning outcome one.
+2. Learning outcome two.
+3. Learning outcome three.
 
-::::
+## Course outline
 
-:::: {.column width="4%"}
-::::
+| Section | Topic | Time |
+|---|---|---|
+| 1 | Topic one | 30 min |
+| 2 | Topic two | 30 min |
+| 3 | Topic three | 30 min |
 
-:::: {.column width="32%"}
-::: {.course-sidebar}
-### Course materials
+Every section has slides and an activity for you. Replace this paragraph with a note on how the course is run.
 
-[Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
+## References & Citations
 
-[Slides](slides.qmd){.btn .btn-primary .btn-lg target="_blank"}
+- Author, A. (Year). *Title*. Publisher. [doi:10.xxxx/xxxxx](https://doi.org/)
 
-### More
-
-- [Instructor notes](instructor.qmd){target="_blank"}
-- [Related courses](https://bristol-training.github.io/)
-<!-- TODO: replace these links with resources relevant to your course -->
-:::
 ::::
 
 :::::

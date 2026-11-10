@@ -1,33 +1,53 @@
 ---
 title: "Instructor notes"
 format: html
+number-sections: false
 ---
 
-# Introduction {.unnumbered}
+# At a glance {.unnumbered}
 
-**Delivery model:** live-code while attendees follow along in their own scripts. Use the slides to introduce each section, then switch to the editor.
+**How it runs:** slides, then one **activity** per section: *Together* (we do a part), *Your turn* (they do it on their own), *Answer* (you show it). The steps for each activity are in the **speaker notes** of its slide (press **S** in the deck).
 
-**Suggested timings:**
+| # | Section | Min | Objective | Activity |
+|---|---|---|---|---|
+| 1 | First section | 30 | 1 | First activity |
+| 2 | Second section | 30 | 2, 3 | Second activity |
 
-| Section | Topic | Approx. time |
-|---|---|---|
-| 1 | First section | 30 min |
-| 2 | Second section | 30 min |
+**By the end, attendees can:**
 
-Leave about 10 minutes per section for the exercise.
+1. Learning outcome one.
+2. Learning outcome two.
+3. Learning outcome three.
 
-## Workspace setup {.unnumbered}
+## Before you start {.unnumbered}
 
-Ask attendees to install the software *before* the session, as it can take a while on a slow connection.
+- Run through the activities once on your own machine.
+- Ask attendees to install the software *before* the session, as it can take a while on a slow connection.
+- Check the links on the slides and notes.
 
-# First section
+## Ground rules {.unnumbered}
 
-## A first example
+- Never debug live. If a demo fails, say so, show the finished version, and move on.
+- Wording works for everyone in the university.
+- If running late, skip the **optional** slides first, then shorten a *Your turn*, not a section.
 
-**Live code:** type the vector in the console first, then move it into a script.
+# 1. First section (30 min)
 
-**Pitfalls:** people often forget the `c()`.
+**Activity:** describe the activity and what the answer looks like.
 
-# Second section
+**Checkpoints:** by 5 min *Together*; by 10 *Your turn*; by 20 *Answer*; finish at 30.
 
-This section often runs over. If short on time, skip straight to the exercise.
+**Key messages**
+
+- Key message one.
+- Key message two.
+
+**Don't forget**
+
+- Pitfalls, for example people often forget the `c()`.
+
+# 2. Second section (30 min)
+
+This section often runs over. If short on time, skip straight to the activity.
+
+**Checkpoints:** by 5 min *Together*; by 10 *Your turn*; by 20 *Answer*; finish at 30.

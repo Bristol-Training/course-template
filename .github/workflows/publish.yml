@@ -1,0 +1,87 @@
+# Render the course website and publish it to the gh-pages branch.
+# Runs on every push to main, and can be started by hand from the Actions tab
+# (Actions > Publish website > Run workflow).
+#
+# Code chunks are frozen (`freeze: auto` in _quarto.yml): the results are kept
+# in this Action's cache, and a page's code only re-runs when that page changes.
+# R and Python are installed only when the code has changed, and only if the
+# course has a DESCRIPTION file (R) or a requirements.txt (Python).
+name: Publish website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # A DESCRIPTION file means the pages use R, and requirements.txt means they
+      # use Python. Each lists the packages to install (see README).
+      - name: Work out which languages the pages use
+        id: deps
+        run: |
+          echo "r=$([ -f DESCRIPTION ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "python=$([ -f requirements.txt ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      # Frozen code results from earlier runs. An exact match means no page
+      # has changed, so nothing needs to run.
+      - name: Restore frozen code results
+        id: freeze
+        uses: actions/cache@v4
+        with:
+          path: _freeze
+          key: freeze-${{ hashFiles('*.qmd', '_quarto.yml', 'DESCRIPTION', 'requirements.txt') }}
+          restore-keys: freeze-
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # setup-r installs system packages with apt. The runner's default Azure
+      # Ubuntu mirror sometimes stalls mid-download, hanging the job, so use
+      # the main Ubuntu archive instead.
+      - name: Use the main Ubuntu package mirror
+        if: steps.deps.outputs.r == 'true' && steps.freeze.outputs.cache-hit != 'true'
+        run: |
+          sudo grep -rl 'azure.archive.ubuntu.com' /etc/apt/ 2>/dev/null \
+            | xargs -r sudo sed -i 's#http://azure.archive.ubuntu.com#http://archive.ubuntu.com#g'
+
+      - name: Set up R
+        if: steps.deps.outputs.r == 'true' && steps.freeze.outputs.cache-hit != 'true'
+        timeout-minutes: 10
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install R packages
+        if: steps.deps.outputs.r == 'true' && steps.freeze.outputs.cache-hit != 'true'
+        uses: r-lib/actions/setup-r-dependencies@v2
+
+      - name: Set up Python
+        if: steps.deps.outputs.python == 'true' && steps.freeze.outputs.cache-hit != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python packages
+        if: steps.deps.outputs.python == 'true' && steps.freeze.outputs.cache-hit != 'true'
+        run: python3 -m pip install -r requirements.txt
+
+      - name: Render and publish to gh-pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

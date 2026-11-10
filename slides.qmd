@@ -9,7 +9,7 @@ execute:
   message: false
 ---
 
-## Today's mission {.center}
+## Today's mission {.big .center}
 
 ::: {.big .center}
 One big statement<br>about what we'll<br>achieve today.
@@ -37,8 +37,19 @@ We code.<br>You code.
 
 ## The journey
 
-::: {.flow}
-[First section]{.step} [→]{.arrow} [Second section]{.step}
+::: {.cards .journey}
+::: {.card .fragment}
+**1 · First section**
+*What question does it answer?*
+A one-line summary of the section
+[Hands-on: the first activity]{.hands-on}
+:::
+::: {.card .fragment}
+**2 · Second section**
+*What question does it answer?*
+A one-line summary of the section
+[Hands-on: the second activity]{.hands-on}
+:::
 :::
 
 # [01]{.section-number} First section {.section-divider background-color="var(--jgi-red)"}
@@ -47,10 +58,10 @@ We code.<br>You code.
 
 ## A first example
 
-```{r}
+```{python}
 #| eval: true
-heights <- c(1.62, 1.75, 1.80, 1.68)
-mean(heights)
+heights = [1.62, 1.75, 1.80, 1.68]
+sum(heights) / len(heights)
 ```
 
 ::: notes
@@ -70,18 +81,29 @@ A short explanation
 :::
 :::
 
-## Your turn ✍️
+## Calculate the median {.demo-slide}
 
-::: {.your-turn}
-**Exercise 1** in the notes
+[Your turn]{.your-turn-tag} [5 min]{.demo-meta}
 
-::: {.medium}
 Calculate the median of `heights`.
-:::
 
 ::: {.muted}
 Answers are in the notes. Try it yourself first!
 :::
+
+## Calculate the median {.demo-slide}
+
+[Answer]{.answer-tag} [2 min]{.demo-meta}
+
+```{python}
+#| eval: true
+import statistics
+
+statistics.median(heights)
+```
+
+::: notes
+Use `[Together]{.demo-tag}` for steps the instructor leads, `[Your turn]{.your-turn-tag}` for attendee activities and `[Answer]{.answer-tag}` for the solution.
 :::
 
 # [02]{.section-number} Second section {.section-divider background-color="var(--jgi-red)"}
@@ -98,11 +120,11 @@ Answers are in the notes. Try it yourself first!
 ✘ Something to avoid
 :::
 
-## Your turn ✍️
+## Second exercise {.demo-slide}
 
-::: {.your-turn}
-**Exercise 2** in the notes
-:::
+[Your turn]{.your-turn-tag} [5 min]{.demo-meta}
+
+Describe the second exercise here.
 
 ## Thank you {.center}
 
